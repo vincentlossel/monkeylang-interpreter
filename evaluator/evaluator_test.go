@@ -1,7 +1,6 @@
 package evaluator
 
 import (
-	"fmt"
 	"testing"
 
 	"monkey/lexer"
@@ -402,10 +401,9 @@ func TestArrayIndeExpressions(t *testing.T) {
 		},
 	}
 
-	for i, tt := range tests {
+	for _, tt := range tests {
 		evaluated := testEval(tt.input)
 		integer, ok := tt.expected.(int)
-		fmt.Println(i)
 
 		if ok {
 			testIntegerObject(t, evaluated, int64(integer))
