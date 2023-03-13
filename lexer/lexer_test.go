@@ -127,7 +127,7 @@ macro(x, y) { x + y; };
 		{token.MACRO, "macro"},
 		{token.LPAREN, "("},
 		{token.IDENT, "x"},
-		{token.PLUS, "+"},
+		{token.COMMA, ","},
 		{token.IDENT, "y"},
 		{token.RPAREN, ")"},
 		{token.LBRACE, "{"},
