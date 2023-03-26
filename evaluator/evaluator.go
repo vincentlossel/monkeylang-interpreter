@@ -26,8 +26,6 @@ func Eval(node ast.Node, env *object.Environment) object.Object {
 		return Eval(node.Expression, env)
 
 	case *ast.ReturnStatement:
-		// fix: node.ReturnValue is <nil>
-		// node returns "return ;" : missing the value returned which causes the tests to fail
 		val := Eval(node.ReturnValue, env)
 		if isError(val) {
 			return val
